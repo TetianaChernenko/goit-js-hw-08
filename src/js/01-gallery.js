@@ -27,7 +27,10 @@ function onImageOriginalCard(e) {
           return
     }
     console.log(e.target);
-    const instance = SimpleLightbox.create(`<img src="${e.target.dataset.source}">`).show(); 
+    let lightbox = new SimpleLightbox('.gallery a', {
+    captionDelay: 250,
+    captionsData: "alt",
+ });
 };
 
 console.log(galleryEl);
